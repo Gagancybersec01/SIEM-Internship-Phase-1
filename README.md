@@ -14,3 +14,27 @@
 5. **Monitoring Add-Ons:** AuditD and NXLog Tools
 
 -> We Download and install All Machines and Tools. Then Configure The Wazuh and Add Endpoint is Ubuntu With Monirotoing Tools AuditD and NXLog. Here we detailed Explaind in **SIEM-LAB-SETUP File** This File You Can Find the **Phase1-Tasks Folder** that How To Install, Steup and Configure the SIEM Lab Setup. Go Through The File and Setup Lab. 
+
+**What Is A SIEM and Why it Matters?**
+SIEM stands for Security Information and Event Management. It refers to a set of technologies and practices used by organizations to monitor, detect, analyze, and respond to security events across their IT infrastructure. A SIEM system provides a centralized platform that collects, normalizes, and analyzes data from various sources to help security teams detect malicious activity, ensure compliance, and improve overall security posture.
+-> You Can Find a Detailed Documentation in the **Phase1-Tasks** Folder the file is **What-Is-SIEM** in this file explained detailed what is siem and why it is matters. 
+
+# PHASE-1 TASKS
+1. Brute Forece Detection
+2. Malware Detection
+3. Data Exfiltration Detection
+4. Suspicious Network Activity
+5. Phishing Email Detection
+6. Unauthorized Access Attempt
+7. Suspicious File Download
+8. Privilege Escalation Attempt
+9. Lateral Movement Detection
+10. Command and Control (C2) Traffic Detection
+
+
+
+
+
+
+
+
