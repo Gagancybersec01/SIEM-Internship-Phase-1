@@ -13,5 +13,4 @@
    Detects malware, unauthorized access, and suspicious behavior.
 5. **Monitoring Add-Ons:** AuditD and NXLog Tools
 
--> We Download and install All Machines and Tools. Then Configure The Wazuh and Add Endpoint is Ubuntu With Monirotoing Tools AuditD and NXLog. 
--> Here we detailed Explaind in **LAB-SETUP File** This File You Can Find the **Phase1-Tasks Folder** that How To Install, Steup and Configure the SIEM Lab Setup
+-> We Download and install All Machines and Tools. Then Configure The Wazuh and Add Endpoint is Ubuntu With Monirotoing Tools AuditD and NXLog. Here we detailed Explaind in **SIEM-LAB-SETUP File** This File You Can Find the **Phase1-Tasks Folder** that How To Install, Steup and Configure the SIEM Lab Setup. Go Through The File and Setup Lab. 
