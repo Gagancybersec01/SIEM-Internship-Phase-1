@@ -170,9 +170,9 @@ Linux - rule.id:(5551 OR 5712). Other related rules are 5710, 5711, 5716, 5720, 
 
 ![image alt](https://github.com/Gagancybersec01/SIEM-Internship-Phase-1/blob/4ffe16a155c5fa43c405168a070a0aa3b81882b5/Screenshots/Brute-Force-2.png)
 
-![image alt](Screenshots/Brute-Force-3.png)
+![image alt]([Screenshots/Brute-Force-3.png](https://github.com/Gagancybersec01/SIEM-Internship-Phase-1/blob/5e04eaeb1272d9d5c2486c91e98e92dfa0f46844/Screenshots/Brute-Force-3.png))
 
-![image alt](Screenshots/Brute-Force-4.png)
+![image alt](https://github.com/Gagancybersec01/SIEM-Internship-Phase-1/blob/5e04eaeb1272d9d5c2486c91e98e92dfa0f46844/Screenshots/Brute-Force-4.png)
 
 ![image alt](Screenshots/privilege-Access-1.png)
 
