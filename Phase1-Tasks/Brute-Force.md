@@ -166,4 +166,16 @@ You can visualize the alert data in the Wazuh dashboard. To do this, go to the T
 Linux - rule.id:(5551 OR 5712). Other related rules are 5710, 5711, 5716, 5720, 5503, 5504.
 
 
+# Proof-Of-Concept
+
+![image alt](Screenshots/Brute-Force-2.png)
+![image alt](Screenshots/Brute-Force-3.png)
+![image alt](Screenshots/Brute-Force-4.png)
+![image alt](Screenshots/privilege-Access-1.png)
+![image alt](Screenshots/privilege-Access-2.png)
+
+
+
+
+
 
