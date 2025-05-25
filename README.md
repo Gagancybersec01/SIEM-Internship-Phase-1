@@ -19,6 +19,8 @@
 SIEM stands for Security Information and Event Management. It refers to a set of technologies and practices used by organizations to monitor, detect, analyze, and respond to security events across their IT infrastructure. A SIEM system provides a centralized platform that collects, normalizes, and analyzes data from various sources to help security teams detect malicious activity, ensure compliance, and improve overall security posture.
 -> You Can Find a Detailed Documentation in the **Phase1-Tasks** Folder the file is **What-Is-SIEM** in this file explained detailed what is siem and why it is matters. 
 
+_________________________________________________________________________________________________
+
 # PHASE-1 TASKS
 1. Brute Forece Detection
 2. Malware Detection
@@ -32,7 +34,7 @@ SIEM stands for Security Information and Event Management. It refers to a set of
 10. Command and Control (C2) Traffic Detection
 
 
-
+-> 
 
 
 
