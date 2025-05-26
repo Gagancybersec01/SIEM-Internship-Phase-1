@@ -30,6 +30,11 @@ ________________________________________
 
 # Proof-Of-Concept 
 
-![Privilege-Attempt]()
+![Privilege-Attempt](https://github.com/Gagancybersec01/SIEM-Internship-Phase-1/blob/f5949414426e887067df2096ad775bb0c501b199/Screenshots/Privilege-Account1.png)
 
-![Privilege-Attempt]()
+![Privilege-Attempt](https://github.com/Gagancybersec01/SIEM-Internship-Phase-1/blob/f5949414426e887067df2096ad775bb0c501b199/Screenshots/Privilege-Account-user.png)
+
+
+
+
+
