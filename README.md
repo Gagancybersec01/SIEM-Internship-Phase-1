@@ -23,13 +23,14 @@ ________________________________________________________________________________
 
 # Scenarios PHASE-1 TASKS
 
-1. Brute Force Detection
-2. Malware Detection
-3. Suspicious Network Activity
-4. Unauthorized Access Attempt
-5. Privilege Escalation Attempt
-6. Latral Movement Detection
-7. Coomannd And Control (C2)
+**1. Brute Force Detection**
+**2. Malware Detection**
+**3. Suspicious Network Activity**
+**4. Unauthorized Access Attempt**
+**5. Privilege Escalation Attempt**
+**6. Latral Movement Detection**
+**7. Coomannd And Control (C2)**
+**8. Simulate Log Tampering**
 
 
 
