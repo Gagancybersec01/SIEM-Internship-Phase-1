@@ -21,20 +21,19 @@ SIEM stands for Security Information and Event Management. It refers to a set of
 
 _________________________________________________________________________________________________
 
-# PHASE-1 TASKS
-1. Brute Forece Detection
+# Scenarios PHASE-1 TASKS
+
+1. Brute Force Detection
 2. Malware Detection
-3. Data Exfiltration Detection
-4. Suspicious Network Activity
-5. Phishing Email Detection
-6. Unauthorized Access Attempt
-7. Suspicious File Download
-8. Privilege Escalation Attempt
-9. Lateral Movement Detection
-10. Command and Control (C2) Traffic Detection
+3. Suspicious Network Activity
+4. Unauthorized Access Attempt
+5. Privilege Escalation Attempt
+6. Latral Movement Detection
+7. Coomannd And Control (C2)
 
 
--> 
+
+
 
 
 
