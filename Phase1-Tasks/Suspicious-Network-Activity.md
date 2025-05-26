@@ -83,5 +83,7 @@ Watch for many SYN packets from Kali:
 # Proof-Of-Concept
 
 
+![Network-detection](https://github.com/Gagancybersec01/SIEM-Internship-Phase-1/blob/49c31291b07d0d34f7c7ff0817d15c818273c7d5/Screenshots/nmap1.png)
 
+![Network-detection](https://github.com/Gagancybersec01/SIEM-Internship-Phase-1/blob/49c31291b07d0d34f7c7ff0817d15c818273c7d5/Screenshots/nmap2.png)
 
