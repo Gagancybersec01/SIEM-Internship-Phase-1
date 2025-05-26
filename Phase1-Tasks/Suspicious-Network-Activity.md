@@ -15,9 +15,42 @@ Detect reconnaissance activity (e.g., port scan) targeting Ubuntu using:
 # Tools Used
 -> nmap (on Kali)
 
--> tcpdump / Wireshark (on Ubuntu)
+-> Suricata Intigration For Ntework Log Collection
 
 -> Wazuh with network/connection logging enabled
+
+**Install Suricata on the Ubuntu endpoint. We tested this process with version 6.0.8 and it can take some time:**
+
+    sudo add-apt-repository ppa:oisf/suricata-stable
+    sudo apt-get update
+    sudo apt-get install suricata -y
+
+**Download and extract the Emerging Threats Suricata ruleset:**
+
+    cd /tmp/ && curl -LO https://rules.emergingthreats.net/open/suricata-6.0.8/emerging.rules.tar.gz
+    sudo tar -xvzf emerging.rules.tar.gz && sudo mv rules/*.rules /etc/suricata/rules/
+    sudo chmod 640 /etc/suricata/rules/*.rules
+
+Modify Suricata settings in the /etc/suricata/suricata.yaml file and set the following variables:
+
+    HOME_NET: "<UBUNTU_IP>"
+    EXTERNAL_NET: "any"
+    
+    default-rule-path: /etc/suricata/rules
+    rule-files:
+    - "*.rules"
+    
+    # Global stats configuration
+    stats:
+    enabled: Yes
+    
+    # Linux high speed capture support
+    af-packet:
+      - interface: eth0
+      
+**Restart the Suricata service:**
+
+    sudo systemctl restart suricata
 
  # Step-by-Step Guide
 **Step 1: Simulate a Port Scan (on Kali)**
@@ -31,72 +64,21 @@ You can also add -T4 for faster scan:
 
 This will send SYN packets without completing the TCP handshake — typical reconnaissance.
 
-**Step 2: Monitor with tcpdump or Wireshark (on Ubuntu)**
-
-Use tcpdump on Ubuntu:
-
-    sudo tcpdump -i eth0 port 1-1000
-
 Watch for many SYN packets from Kali:
-
-Open Wireshark and Apply Filter:
-
-    tcp.flags.syn == 1 and tcp.flags.ack == 0
-
-This will show pure SYN packets (common in -sS scan).
-
-**Step 3: Configure Logging for Detection**
-
-Ensure Ubuntu firewall is logging (for dropped scans)If using ufw:
-
-sudo ufw logging on
-
-Then view logs:
-
-    sudo tail -f /var/log/ufw.log
-
-Make sure /var/log/ufw.log is monitored by Wazuh:
 
 **In /var/ossec/etc/ossec.conf:**
 
     xml
     
-    Copy code
     <localfile>
       <log_format>syslog</log_format>
-      <location>/var/log/ufw.log</location>
+      <location>/var/log/suricata/eve.json</location>
     </localfile>
     
 **Restart Wazuh agent:**
 
     sudo systemctl restart wazuh-agent
 
-**Step 4: Create Wazuh Alert Rule for Scan Detection**
-
-On the Wazuh Manager, create a custom rule to detect port scans.
-
-    sudo nano /var/ossec/etc/rules/local_rules.xml
-    
-  **Example Rule for Nmap SYN Scan**
-  
-    xml
-    
-    Copy code
-    <group name="network,suspicious,portscan,nmap">
-      <rule id="100300" level="10">
-        <if_sid>5710</if_sid> <!-- base Wazuh rule for connection attempts -->
-        <match>UFW BLOCK</match>
-        <description>Possible port scan detected (UFW blocked connection)</description>
-        <frequency>10</frequency>
-        < timeframe>60</timeframe>
-        <same_source_ip />
-        <mitre>
-          <id>T1046</id> <!-- Network Service Scanning -->
-        </mitre>
-      </rule>
-    </group>
-
-After configuration the alert rules we need to restart the wazuh manager. Then we will see all the suspicious network activity logs in the wazuh dashboard. 
 
 # Proof-Of-Concept
 
